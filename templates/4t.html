@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorok</title>
+    <!--    Bootstrap    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--    Saját    -->
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 nagy_szoveg">
+                
+                <h1>4 Ütem</h1>
+                <div class="motor-mukodese" id="motor-mukodese">
+                    <p><h1>A motor működése</h1></p>
+                    <hr>
+                    <h3><b>Az első ütem: a szívás</b></h3>
+                    <p>
+                        A lefelé haladó dugattyú maga után szívja (fizikailag a dugattyú fölött keletkező térbe a normál külső légköri nyomás által beáramlik) a porlasztóból a benzin-levegő keveréket. A porlasztó által elporlasztott üzemanyaghoz megfelelő mennyiségű levegőt keverve, a kész elegy a szívócsövön keresztül áramlik a henger belsejébe.
+                        Amikor a dugattyú az alsó helyzetbe ér, a dugattyú fölötti hengertér teljesen feltöltődik a benzin-levegő keverékkel. A dugattyú a legfelső helyzetről (felső holtpont) a legalsó helyzetre (alsó holtpont) való mozgásakor a forgattyús tengely fél fordulattal elfordult. Ettől a pillanattól kezdődik a második ütem.
+                    </p>
+                    <br>
+                    <h3><b>A második ütem: a sűrítés</b></h3>
+                    <p>
+                        A vezérműtengely által vezérelt szívószelep elzárja a szívócső furatát. A forgattyús tengely további forgása következtében a dugattyú lentről felfelé halad.
+                        Az előző ütemben beszívott benzin-levegő keverék nem tud kiáramlani a hengerből (a kipufogószelep szintén zárva van). A dugattyú tehát a fölötte lévő keveréket erősen összenyomja (összesűríti). Attól a pillanattól kezdve, hogy a dugattyú ismét a legfelső helyzetbe kerül, kezdődik a harmadik ütem.
+                    </p>
+                    <br>
+                    <h3><b>A harmadik ütem: expanzió</b></h3>
+                    <p>
+                        Amikor a dugattyú a felső holtponttól visszaszámított 2 mm-t eléri (itt keletkezik a megfelelő levegő-benzin keverék), a gyújtógyertya elektródái között villamos szikra ugrik át. Ez a szikra meggyújtja az égéstérben összesűrített benzin-levegő keveréket, ami robbanásszerűen elég.
+                        A terjeszkedő gázok óriási nyomása a dugattyút fentről lefelé löki, ezt nevezzük terjeszkedésnek (expanziónak). A dugattyú a hajtórúdon keresztül fél fordulattal elfordítja a forgattyús tengelyt, amely fél fordulat gyakorlatilag a motor hasznos munkája. (A további fordulatok csak a működés járulékos veszteségeként foghatók fel.) A robbanás nyomán keletkező égésterméket el kell távolítani a hengerből. Ez már a negyedik ütem alatt zajlik le.
+                    </p>
+                    <br>
+                    <h3><b>A negyedik ütem: a kipufogás</b></h3>
+                    <p>
+                        A dugattyú a legalsó helyzetből – ahová az előző ütemben került – ismét felfelé halad. Ekkor viszont nyitva van a kipufogószelep, és a dugattyú kitolja maga előtt a kipufogócsőbe az égésterméket.
+                        Miután a dugattyú ismét a legfelső helyzetbe kerül, záródik a kipufogószelep, nyílik a szívószelep, és az egész folyamat kezdődik elölről. A folyamat termodinamikai modellje az Otto-ciklus vagy Otto-körfolyamat.
+                    </p>
+                </div>
+                <br>
+                <div id="megv_motorok">
+                    <h2>megvalósított motorok</h2>
+                    <p>A vázolt eredeti Otto-körfolyamat csak a korai, lassújárású motoroknál volt jellemző. Hamar rájöttek arra, hogy nagyobb fordulatszámnál (100 fordulat/perc felett) a dugattyú mozgása egyedül nem tudja elég gyorsan megfordítani a gáz áramlását, amikor a szívószelepek kinyitnak. Ezért a korszerű motoroknál a dugattyú felső holtpontja közelében a szívó- és kipufogószelepek egymásba nyitnak kissé. A kipufogószelepen kiáramló gázok magukkal ragadják a szívószelepen keresztül a beáramló üzemanyag-levegő keveréket és így javítják a szívást. Természetesen a távozó füstgázokkal együtt egy kevés friss keverék is távozik, ami rontja a motor hatásfokát. Versenymotoroknál ezzel a kis kiáramló hideg keverékkel a szelepeket hűtik. A kipufogószelepeket is kb. húsz fokkal az alsó holtpont elérése előtt már kezdik nyitni, hogy az égéstermékeknek elég idejük legyen távozni. A korszerű motoroknál a gyújtás sem a felső holtpontban történik, hanem a motor fordulatszámától, és leggyakrabban a szívócsőben uralkodó nyomástól függően előgyújtást alkalmaznak.
+
+                        A szelepek mozgatását általában bütykökkel ellátott vezérműtengely, más néven bütykös tengely végzi. A szelep zárását és zárva tartását erős acélrugóval oldják meg (konstrukciótól függően csavarrugó vagy hajtűrugó). Mivel mind a kipufogószelep, mind a szívószelep egy négyütemű ciklus alatt (vagyis két motorfordulat alatt) egyszer kell, hogy nyisson, a vezérműtengely fordulatszáma a motor fordulatszámának pontosan fele kell legyen. Ebben a konstrukcióban a motor fordulatszámát a szelep zárási sebessége határolja be, a zárási sebességét pedig a szelep és a hozzá tartozó mechanizmus (szelephimba, rúd stb.) tömege, illetve a rugó keménysége határozza meg. Minél kisebb a tömeg és minél keményebb a rugó, annál gyorsabban zár a szelep, azonban a túl erős rugó a kopást növeli. Újabb nagy fordulatszámú konstrukciókban (például versenyautókban, motorkerékpárokban) légrugózású szelepet, illetve kényszerzárású szelepet használnak. Ez utóbbinál a szelep zárásának folyamata pontosan megtervezhető. A kényszerzárású szelepek abban különböznek a hagyományos zárásúaktól, hogy itt a zárást nem rugó, hanem egy másik bütyök végzi, ennek köszönhető a pontosabb működés.
+                        
+                        Összefoglalásként megállapítható, hogy a tényleges tervezési paraméterek meghatározása csak kompromisszum eredménye lehet.</p>
+                </div>
+                <small><a href="https://hu.wikipedia.org/wiki/Otto-motor">Forrás</a></small>
+                <hr>
+                <p><a href="/dashboard">Vissza.</a></p>
+
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
