@@ -24,7 +24,7 @@ def login():
         flash("Sikeres bejelentkezés!", "success")
         return redirect(url_for("dashboard"))
     else:
-        flash("Helytelen felhasználónév vagy jelszó.", "error")
+        flash("Helytelen felhasználónév vagy jelszó. \nFelhasználónév: admin || Jelszó:titkos", "error")
         return redirect(url_for("index"))
 
 # Dashboard (csak bejelentkezett felhasználóknak)

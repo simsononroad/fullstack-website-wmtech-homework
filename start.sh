@@ -4,14 +4,17 @@ set -e
 
 
 
-# fullname="USER INPUT"
-read -p " a program telepíteni fog egy virtuális környezetet myenv néven. Folytatja a telepítést? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+
+read -p "Elolvasta a 'read.md'-t. (I/N): " confirm && [[ $confirm == [iI] ]] || exit 1
+read -p "a program telepíteni fogja a weboldalt a github-ról. Folytatja a telepítést? (I/N): " confirm && [[ $confirm == [iI] ]] || exit 1
+git clone https://github.com/simsononroad/fullstack-website-wmtech-homework.git
+read -p " a program telepíteni fog egy virtuális környezetet myenv néven. Folytatja a telepítést? (I/N): " confirm && [[ $confirm == [iI] ]] || exit 1
 
 python3 -m venv myenv
 echo "Virtuális környezet létrehozva"
 source myenv/bin/activate
 echo "Sikeres belépés a virtuális környezetbe"
-read -p "A program telepíteni fogja a 'flask' nevezetű libary-t. Folytatja a telepítést? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+read -p "A program telepíteni fogja a 'flask' nevezetű libary-t. Folytatja a telepítést? (I/N): " confirm && [[ $confirm == [iI] ]] || exit 1
 
 pip3 install flask
 clear
