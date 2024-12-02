@@ -33,3 +33,7 @@ echo ""
 echo "========Credit==========="
 echo "Created by: Gyuris Dániel"
 echo "========================="
+
+read -p "Elindítja a weboldalt? (I/N): " confirm && [[ $confirm == [iI] ]] || exit 1
+cd fullstack-website-wmtech-homework
+python3 app.py
