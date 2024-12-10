@@ -45,6 +45,7 @@ app.secret_key = "szupertitkoskulcs"  # Ezt cseréld le egy erősebb kulcsra!
 def index():
     return render_template("index.html")
 
+
 # Bejelentkezés
 @app.route("/login", methods=["POST"])
 def login():
@@ -66,10 +67,10 @@ def login():
     print(login_in_db)
     
     if len(login_in_db) == 0:
-        flash("Helytelen felhasználónév vagy jelszó. \nFelhasználónév: admin || Jelszó:titkos", "error")
+        flash("Helytelen felhasználónév vagy jelszó.", "error")
         return redirect(url_for("index"))
     if login_in_db[0][1] != password_hash:
-        flash("Helytelen felhasználónév vagy jelszó. \nFelhasználónév: admin || Jelszó:titkos", "error")
+        flash("Helytelen felhasználónév vagy jelszó.", "error")
         return redirect(url_for("index"))
     session["user"] = username_in_html
     flash("Sikeres bejelentkezés!", "success")
