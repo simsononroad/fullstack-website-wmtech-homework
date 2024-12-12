@@ -57,8 +57,8 @@ def login():
     username_in_html_felesleggel = f"('{username_in_html}',)"
     password_hash_felesleggel = f"('{password_in_html}',)"
     print("================================")
-    print(username_in_html_felesleggel)
-    print(password_hash_felesleggel)
+    print(f"A felhasználó beírta: {username_in_html_felesleggel}")
+    print(f"A felhasználó beírta: {password_hash_felesleggel}")
     print("================================")
     # Hitelesítés az előre megadott adatokkal
     
